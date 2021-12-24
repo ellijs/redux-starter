@@ -20,7 +20,7 @@ function reducer(state = [], action) {
 
 // reducer using Switch
 
-function reducer(state = [], action) {
+export default function reducer(state = [], action) {
     swtich ( action.type ) {
         case "bugAdded" :
             return [
