@@ -24,6 +24,7 @@ const unsubscribe = store.subscribe(()=> {
 // changed to below
 
 store.dispatch(bugAdded("Bug 1"))
+store.dispatch(bugResolved(1))
 
 unsubscribe()
 

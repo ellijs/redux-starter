@@ -24,7 +24,7 @@ function reducer(state = [], action) {
 
 export default function reducer(state = [], action) {
     swtich ( action.type ) {
-        case "bugAdded" :
+        case actions.BUG_ADDED :
             return [
                 ...state,
                 {
@@ -34,11 +34,15 @@ export default function reducer(state = [], action) {
                 }
             ];
     
-        case "bugRemoved" :
-            return state.filter(bug => bug.id !== action.    payload.id)
+        case actions.BUG_REMOVED :
+            return state.filter(bug => bug.id !== action.payload.id)
+
+        case actions.BUG_RESOLVED :
+            return state.map(bug => bug.id !== action.payload.id ? bug : {...bug, resolved: true})
     
         default :
             return state;
     
     }
 }
+
