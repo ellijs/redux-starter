@@ -23,3 +23,15 @@ function App() {
 }
 
 export default App;
+
+
+
+// Action
+{ 
+  type: "bugAdded",
+  payload : {
+    id: 1
+  }
+};
+
+// reducer
